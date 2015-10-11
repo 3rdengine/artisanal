@@ -1,0 +1,42 @@
+.flag-menu-item (@local-flag-width, @margin-top-adjustment) {
+  background-color: @navbar-default-link-active-color;
+  width: @local-flag-width;
+
+  a {
+    z-index: 5;
+  }
+
+  a:hover, a.active {
+    color: @navbar-default-link-color;
+    background-color: transparent;
+  }
+
+  &:after, &:before {
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    margin-top: @margin-top-adjustment;
+  }
+
+  &:after {
+    border: (@local-flag-width/2) solid @navbar-default-link-active-color;
+    margin-left: 0px;
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: @navbar-default-link-active-color;
+    left: 0px;
+  }
+
+  &:before {
+    border: (@local-flag-width/2) solid @navbar-default-link-active-color;
+    margin-left: (@local-flag-width/-2);
+    border-color: rgba(0, 0, 0, 0);
+    right: 0px;
+
+    border-right-color: @navbar-default-link-active-color;
+  }
+}

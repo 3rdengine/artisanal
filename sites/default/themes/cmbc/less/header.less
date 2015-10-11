@@ -59,51 +59,8 @@
   }
 }
 
-.flag-menu-item {
-  background-color: @navbar-default-link-active-color;
-  width: 64px;
-
-  a {
-    z-index: 5;
-  }
-
-  a:hover, a.active {
-    color: @navbar-default-link-color;
-    background-color: transparent;
-  }
-
-  &:after, &:before {
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    z-index: 2;
-    left: 50%;
-    top: 50%;
-    margin-top: -6px;
-  }
-
-  &:after {
-    border: 32px solid @navbar-default-link-active-color;
-    margin-left: 0px;
-    border-color: rgba(136, 183, 213, 0);
-    border-left-color: @navbar-default-link-active-color;
-    left: 0px;
-  }
-
-  &:before {
-    border: 32px solid @navbar-default-link-active-color;
-    margin-left: -32px;
-    border-color: rgba(0, 0, 0, 0);
-    right: 0px;
-
-    border-right-color: @navbar-default-link-active-color;
-  }
-}
-
 .navbar-nav.secondary {
   li.last {
-    .flag-menu-item;
+    .flag-menu-item(64px, -6px);
   }
 }
