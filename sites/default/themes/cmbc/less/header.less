@@ -60,7 +60,9 @@
 }
 
 .navbar-nav.secondary {
-  li.last {
-    .flag-menu-item(64px, -6px);
+  @media screen and (min-width: @screen-sm-min) {
+    > li.last {
+      .flag-menu-item(64px, -6px);
+    }
   }
 }
