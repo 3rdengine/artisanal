@@ -1,1 +1,40 @@
 // Insert your styling here.
+
+.region-footer {
+  background-color: @brand-primary;
+  color: #fff;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  ul li {
+    display: inline;
+    whilte-space: nowrap;
+  }
+
+  ul li:after {
+    content: " \00b7";
+  }
+
+  ul li.last:after {
+    content: none;
+  }
+
+  .credit-line {
+    margin-top: 12px;
+    width: 100%;
+    text-align: center;
+    font-size: .8em;
+
+    a, a:hover, a:visited {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
+
