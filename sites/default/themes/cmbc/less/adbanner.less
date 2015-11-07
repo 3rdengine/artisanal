@@ -1,0 +1,34 @@
+section.block-rotating-banner {
+  position: absolute;
+  top: 51px;
+  z-index: -1;
+  margin-left: -360px;
+  margin-right: auto;
+  width: 728px;
+  left: 50%;
+  border: solid @brand-secondary 5px;
+  border-top: none;
+
+  .rb-slides {
+    height: 179px !important;
+    .rb-slide {
+      margin-left:auto;
+      margin-right:auto;
+      text-align:center;
+    }
+  }
+
+  img, .rb-slides > div.rb-slide {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: 100%;
+  }
+}
+
+header[role=banner] > div.region-header {
+  height: 170px;
+}
+
+section h1.page-header {
+  display: none;
+}
