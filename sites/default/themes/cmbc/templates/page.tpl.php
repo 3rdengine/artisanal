@@ -126,9 +126,9 @@
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
-<!--      <aside class="col-sm-3" role="complementary">-->
-<!--        --><?php //print render($page['sidebar_first']); ?>
-<!--      </aside>-->
+      <aside class="col-sm-3" role="complementary">
+        <?php print render($page['sidebar_first']); ?>
+      </aside>
     <?php endif; ?>
 
     <section<?php print $content_column_class; ?>>
